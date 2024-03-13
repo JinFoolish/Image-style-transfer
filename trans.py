@@ -1,20 +1,20 @@
 import sys
-import matplotlib.pyplot as plt
-from matplotlib.pyplot import imshow  # imshow用于显示二维图像数据
+# import matplotlib.pyplot as plt
+# from matplotlib.pyplot import imshow  # imshow用于显示二维图像数据
 from PIL import Image  # Python Imaging Library,用于图像处理的库，提供了广泛的图像操作功能
 import numpy as np
 import tensorflow as tf
-import pprint
+# import pprint
 
 tf.random.set_seed(272)
-pp = pprint.PrettyPrinter(indent=4)
+# pp = pprint.PrettyPrinter(indent=4)
 img_size = 400
 vgg = tf.keras.applications.VGG19(include_top=False,
                                   input_shape=(img_size, img_size, 3),
                                   weights='pretrained-model/vgg19_weights_tf_dim_ordering_tf_kernels_notop.h5')
 
 vgg.trainable = False
-pp.pprint(vgg)
+# pp.pprint(vgg)
 
 TEST = False
 if TEST:
