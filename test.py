@@ -29,7 +29,6 @@ def convert_image():
 
     tf.random.set_seed(272)
     # pp = pprint.PrettyPrinter(indent=4)
-    img_size = 400
     vgg = tf.keras.applications.VGG19(include_top=False,
                                     input_shape=(img_size, img_size, 3),
                                     weights='pretrained-model/vgg19_weights_tf_dim_ordering_tf_kernels_notop.h5')
